@@ -3,29 +3,28 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - inform_ingredients
+  - inform_steps
+  - request_info
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_specify_url:
+  - text: "Certainly! Please specify a url from allrecipes.com"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_obtained recipe:
+  - text: "Let's begin cooking [recipe-name]. Do you want to [1] go over ingredients list or [2] go over recipe steps?"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  utter_show_ingredients:
+  - text: "[recipe-name].ingredients"
 
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_recipe_step:
+  - text: "[recipe-name].step[i]"
 
-  utter_goodbye:
-  - text: "Bye"
+  utter_continue:
+  - text: "Should I continue to the [i+1] step?"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "I found a reference for you. [how-to video]"
 
 session_config:
   session_expiration_time: 60
